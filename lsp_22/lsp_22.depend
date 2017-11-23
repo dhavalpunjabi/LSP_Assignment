@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511359635 source:/home/dhavalpunjabi/LSP_Assignment/lsp_22/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+
