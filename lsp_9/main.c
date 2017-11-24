@@ -3,17 +3,26 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <time.h>
+#include <pwd.h>
+#include <grp.h>
+#include <sys/types.h>
+
 int main( int argc, char *argv[]){
   struct stat file;
-  char *filetype[] ={"unknown","FIFO","character_device","unknown","directory",
-                      "unknown","block_device","unknown","regular_file","unknown","symlink","unknown","socket"};
+  struct passwd *pwd;
+  struct group  *grp;
+
+  pwd = getpwuid ( getuid());
+  char *filetype[] ={"-","p","c","-","d",
+                      "-","b","-","r","-","l","-","s"};
   if (2 != argc) {
     write(1,"no enough arguments",30);
     exit(EXIT_FAILURE);
   }
   stat("hello",&file);
-  printf("the filetype is %s\n",filetype[(file.st_mode >> 12) & 0x17]);
-  printf("permissions : %c%c%c%c%c%c%c%c%c\n",
+  grp = getgrgid(file.st_gid);
+  printf("%s",filetype[(file.st_mode >> 12) & 0x17]);
+  printf("%c%c%c%c%c%c%c%c%c  ",
          file.st_mode & S_IRUSR ? 'r' : '-',
          file.st_mode & S_IWUSR ? 'w' : '-',
          file.st_mode & S_IXUSR ? 'x' : '-',
@@ -24,8 +33,10 @@ int main( int argc, char *argv[]){
          file.st_mode & S_IWOTH ? 'w' : '-',
          file.st_mode & S_IXOTH ? 'x' : '-'
          );
-  printf("acess time %s\n",ctime(&file.st_atim));
-  printf("change time %s\n",ctime(&file.st_ctim));
-  printf("last modified time %s\n",ctime(&file.st_mtim));
+  printf("%d ",argc-1);
+  printf("%s ", pwd->pw_name);
+  printf("%s ", grp->gr_name);
+  printf("%s\n",ctime(&file.st_atime));
+
   return 0;
 }
