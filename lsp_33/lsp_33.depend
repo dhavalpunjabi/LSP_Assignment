@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1511761173 source:/home/dhavalpunjabi/LSP_Assignment/lsp_33/main.c
+	<netinet/in.h>
+	<netdb.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<unistd.h>
+
