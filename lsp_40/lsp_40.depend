@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1511888355 source:/home/dhavalpunjabi/LSP_Assignment/lsp_40/main.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<netdb.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<string.h>
+
