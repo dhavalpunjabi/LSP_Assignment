@@ -1,6 +1,0 @@
-Hi Dhaval!
-Welcome to Elear Solution!
-This is Linux System Programming!
-This is Program 6.
-It uses mmap system call !
-Copying some portion of "foo" to bar!!
