@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1511165632 source:/home/dhavalpunjabi/LSP_Assignment/lsp_2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<errno.h>
+	<sys/types.h>
+
