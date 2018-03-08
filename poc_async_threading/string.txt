@@ -1,0 +1,1 @@
+create table if not exists employee (id INT, salary INT, name TEXT);

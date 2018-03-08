@@ -1,0 +1,1 @@
+create table if not exists company (EMP_ID INT, NAME TEXT, Address TEXT, Project_id INT,PLACE TEXT, Contact TEXT);create table if not exists project (PROJECT_ID INT NOT NULL);

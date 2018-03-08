@@ -1,0 +1,1 @@
+insert into employee(id, salary, name) WITH emp_id(id) AS (VALUES(1) UNION ALL SELECT id+1 from emp_id where id < 100000) SELECT id, (VALUES(15000) UNION ALL SELECT 35000 * random () * 15 + 10000), ("DHAVAL") from emp_id;

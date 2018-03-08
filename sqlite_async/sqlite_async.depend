@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1519452979 source:/home/dhavalpunjabi/LSP_Assignment/sqlite_async/main.c
+	<stdio.h>
+	<stdlib.h>
+	<sqlite3.h>
+	<pthread.h>
+	<sys/types.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<string.h>
+	<stdbool.h>
+	<stdarg.h>
+	<time.h>
+	"../../sqlite/ext/async/sqlite3async.h"
+
+1518051611 /home/dhavalpunjabi/sqlite/ext/async/sqlite3async.h
+
+1518051611 source:/home/dhavalpunjabi/sqlite/ext/async/sqlite3async.c
+	"sqlite3async.h"
+	"sqlite3.h"
+	<stdarg.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<windows.h>
+	<pthread.h>
+	<sched.h>
+
+1518051611 source:/mnt/host/sqlite/ext/async/sqlite3async.c
+	"sqlite3async.h"
+	"sqlite3.h"
+	<stdarg.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<windows.h>
+	<pthread.h>
+	<sched.h>
+
+1518051611 /mnt/host/sqlite/ext/async/sqlite3async.h
+
